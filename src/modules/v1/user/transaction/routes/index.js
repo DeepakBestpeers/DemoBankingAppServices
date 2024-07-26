@@ -30,7 +30,7 @@ trx.post('/fundTransfer', checkApiHeaders, jwtVerifyToken, fundTransferValidator
 /*
 * create routes for getStatement method in trxController
 */
-trx.get('/statement', checkApiHeaders, jwtVerifyToken, (req, res, next) => { trxController.getStatement(req, res, next); });
+trx.post('/statement', checkApiHeaders, jwtVerifyToken, (req, res, next) => { trxController.getStatement(req, res, next); });
 
 
 export { trx };
