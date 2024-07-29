@@ -27,7 +27,7 @@ class TrxModel extends BaseModel {
             "targetAcc",
             "createdAt as trxDate"
           )
-          .orderBy("id",orderBy);
+          .orderBy("createdAt",orderBy);
       } else {
         baseQuery.countDistinct(`id as totalCount`);
       }
